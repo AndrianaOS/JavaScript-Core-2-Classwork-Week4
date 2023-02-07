@@ -9,3 +9,12 @@ Exercise 2
   Hint: try searching for setInterval.
 
 */
+
+const colors = ["red", "yellow", "green", "pink"];
+
+let counter = 0;
+
+const main = document.querySelector("body");
+setInterval(() => {
+  main.style.backgroundColor = colors[counter++ % colors.length];
+}, 5000);

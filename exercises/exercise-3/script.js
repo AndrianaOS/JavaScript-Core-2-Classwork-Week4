@@ -47,9 +47,19 @@ Create a function called "showMovies" that
 */
 
 function showMovies() {
+  movies.forEach((eachMovie) => {
+    const pElement = document.createElement("p");
+    pElement.innerText = `${eachMovie.title} by ${eachMovie.director}`;
+
+    document.querySelector("#allMovies").appendChild(pElement);
+  });
+
+  const movieNumber = document.querySelector("#moviesNumber");
+  movieNumber.innerText = movies.length;
   // add code here
 }
 
+showMovies(movies);
 
 /*
 
@@ -64,11 +74,13 @@ How many movies can you see on your page?
 
 const myFavMovie = {
   // add code here
-}
+};
 
 function addMovie(movie, callback) {
   // add code here
 }
+
+addMovie(myFavMovie);
 
 /*
 
@@ -77,8 +89,6 @@ Can you change the addMovie function to make sure the new movie you just added i
 Hint: use callbacks
 
 */
-
-
 
 /*
 

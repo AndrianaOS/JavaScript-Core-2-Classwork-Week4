@@ -21,3 +21,13 @@ const greekGods = [
   "Poseidon",
   "Zeus",
 ];
+
+for (let eachGod of greekGods) {
+  if (greekGods.indexOf(eachGod) === 2) {
+    setTimeout(() => {
+      console.log(`${greekGods.indexOf(eachGod)}. ${eachGod}`);
+    }, 2000);
+  } else {
+    console.log(`${greekGods.indexOf(eachGod)}. ${eachGod}`);
+  }
+}
